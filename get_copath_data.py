@@ -14,4 +14,7 @@ def get_path_data(case_numbers):
 if __name__ == '__main__':
     case_numbers = ['H19-5749']
     df = get_path_data(case_numbers)
-    print(df)
+    print(df.head())
+
+    # save the data to a csv file
+    df.to_csv('path_data.csv', index=False)
