@@ -14,11 +14,6 @@ result_dirs = [d for d in all_subdirs if "BMA-diff" in d or "PBS-diff" in d]
 
 all_result_dir_paths = [os.path.join(data_dir, d) for d in result_dirs]
 
-save_dir = "/media/hdd3/neo/not_enough_focus_regions_topviews"
-os.makedirs(save_dir, exist_ok=True)
-os.makedirs(os.path.join(save_dir, "BMA_grid_rep"), exist_ok=True)
-os.makedirs(os.path.join(save_dir, "BMA_heat_map", "topviews"), exist_ok=True)
-
 num_errors = 0
 num_dirs = len(all_result_dir_paths)
 non_error_dirs = []
