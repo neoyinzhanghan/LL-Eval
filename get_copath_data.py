@@ -17,4 +17,4 @@ if __name__ == '__main__':
     print(df.head())
 
     # save the data to a csv file
-    df.to_csv('path_data.csv', index=False)
+    df.to_csv('/media/hdd3/neo/test_path_data.csv', index=False)

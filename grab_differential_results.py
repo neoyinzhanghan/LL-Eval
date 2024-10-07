@@ -24,6 +24,8 @@ for result_dir_path in tqdm(all_result_dir_paths, desc="Filtering out error dirs
     if not os.path.exists(os.path.join(result_dir_path, "error.txt")):
         non_error_dirs.append(result_dir_path)
 
+        
+
     else:
         num_errors += 1
 
