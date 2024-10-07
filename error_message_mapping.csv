@@ -1,0 +1,189 @@
+Pseudo_Label,Error_Message
+Error 1,Too few focus regions found.
+Error 2,'confidence'
+Error 3,[Errno 13] Permission denied: '/tmp/ray/session_2024-09-30_16-49-15_845290_1578405/node_ip_address.json.lock'
+Error 4,nan
+Error 5,"The specimen is not Bone Marrow Aspirate. Instead, it is Others."
+Error 6,'<' not supported between instances of 'int' and 'NoneType'
+Error 7,Relative blue signal is too weak. min_num_regions_within_foci_sd 500 is not reached. Only 36 regions found at num_sds=1. Check slide for potential poor staining/imaging.)
+Error 8,SlideError: read_region took longer than 60 seconds
+Error 9,"The specimen is not Bone Marrow Aspirate. Instead, it is Manual Peripheral Blood or Inadequate Bone Marrow Aspirate."
+Error 10,"OpenCV(4.10.0) :-1: error: (-5:Bad argument) in function 'rectangle'
+> Overload resolution failed:
+>  - Can't parse 'pt1'. Sequence item with index 0 has a wrong type
+>  - Can't parse 'pt1'. Sequence item with index 0 has a wrong type
+>  - Can't parse 'rec'. Expected sequence length 4, got 2
+>  - Can't parse 'rec'. Expected sequence length 4, got 2
+"
+Error 11,"The specimen is not Bone Marrow Aspirate. Instead, it is Peripheral Blood."
+Error 12,"Task was killed due to the node running low on memory.
+Memory on the node (IP: 172.28.164.114, ID: e62fc5588c7db0f8106c6b35726dadccc73ae8e06b3f99cfad6bfec1) where the task (actor ID: 1ab0d54890055e0d52c239ac01000000, name=WSICropManager.__init__, pid=1929115, memory used=2.54GB) was running was 239.39GB / 251.49GB (0.951883), which exceeds the memory usage threshold of 0.95. Ray killed this worker (ID: e2615cd82b432c8a7cce35ca70d116fc3ce7524a3b285461efaa5c83) because it was the most recently scheduled task; to see more information about memory usage on this node, use `ray logs raylet.out -ip 172.28.164.114`. To see the logs of the worker, use `ray logs worker-e2615cd82b432c8a7cce35ca70d116fc3ce7524a3b285461efaa5c83*out -ip 172.28.164.114. Top 10 memory users:
+PID	MEM(GB)	COMMAND
+1567642	46.47	python scripts/run_all_H_slides.py
+1929098	2.82	ray::WSICropManager.async_get_focus_region_image_batch
+1929089	2.79	ray::WSICropManager
+1929100	2.79	ray::WSICropManager.async_get_focus_region_image_batch
+1929090	2.73	ray::WSICropManager.async_get_focus_region_image_batch
+1929086	2.70	ray::WSICropManager.async_get_focus_region_image_batch
+1929097	2.69	ray::WSICropManager.async_get_focus_region_image_batch
+1929096	2.66	ray::WSICropManager.async_get_focus_region_image_batch
+1929101	2.66	ray::WSICropManager.async_get_focus_region_image_batch
+1929087	2.65	ray::WSICropManager.async_get_focus_region_image_batch
+Refer to the documentation on how to address the out of memory issue: https://docs.ray.io/en/latest/ray-core/scheduling/ray-oom-prevention.html. Consider provisioning more memory on this node or reducing task parallelism by requesting more CPUs per task. Set max_restarts and max_task_retries to enable retry when the task crashes due to OOM. To adjust the kill threshold, set the environment variable `RAY_memory_usage_threshold` when starting Ray. To disable worker killing, set the environment variable `RAY_memory_monitor_refresh_ms` to zero."
+Error 13,"Ray component dashboard_agent_http is trying to use a port number 52365 that is used by other components.
+Port information: {'gcs': 'random', 'object_manager': 'random', 'node_manager': 'random', 'gcs_server': 63141, 'client_server': 'random', 'dashboard': 'random', 'dashboard_agent_grpc': 52365, 'dashboard_agent_http': 52365, 'dashboard_grpc': 'random', 'runtime_env_agent': 58114, 'metrics_export': 49489, 'redis_shards': 'random', 'worker_ports': 'random'}
+If you allocate ports, please make sure the same port is not used by multiple components."
+Error 14,"Ray component dashboard_agent_http is trying to use a port number 52365 that is used by other components.
+Port information: {'gcs': 'random', 'object_manager': 'random', 'node_manager': 'random', 'gcs_server': 51576, 'client_server': 'random', 'dashboard': 'random', 'dashboard_agent_grpc': 52365, 'dashboard_agent_http': 52365, 'dashboard_grpc': 'random', 'runtime_env_agent': 63421, 'metrics_export': 46765, 'redis_shards': 'random', 'worker_ports': 'random'}
+If you allocate ports, please make sure the same port is not used by multiple components."
+Error 15,"Ray component metrics_export is trying to use a port number 52365 that is used by other components.
+Port information: {'gcs': 'random', 'object_manager': 'random', 'node_manager': 'random', 'gcs_server': 44994, 'client_server': 'random', 'dashboard': 'random', 'dashboard_agent_grpc': 55903, 'dashboard_agent_http': 52365, 'dashboard_grpc': 'random', 'runtime_env_agent': 65084, 'metrics_export': 52365, 'redis_shards': 'random', 'worker_ports': 'random'}
+If you allocate ports, please make sure the same port is not used by multiple components."
+Error 16,"Task was killed due to the node running low on memory.
+Memory on the node (IP: 172.28.164.114, ID: 2887bacd2494588897c234c1250d3adef818ee5522de94a65fa7df7d) where the task (actor ID: 25118f0ba2c641d78ed6aa3b01000000, name=WSICropManager.__init__, pid=1212679, memory used=2.35GB) was running was 239.53GB / 251.49GB (0.95242), which exceeds the memory usage threshold of 0.95. Ray killed this worker (ID: 2689c170c85975830b538e502addbd8bee77f5684eed6338894c8a03) because it was the most recently scheduled task; to see more information about memory usage on this node, use `ray logs raylet.out -ip 172.28.164.114`. To see the logs of the worker, use `ray logs worker-2689c170c85975830b538e502addbd8bee77f5684eed6338894c8a03*out -ip 172.28.164.114. Top 10 memory users:
+PID	MEM(GB)	COMMAND
+1567642	98.98	python scripts/run_all_H_slides.py
+1212663	2.63	ray::WSICropManager
+1212684	2.62	ray::WSICropManager.async_get_focus_region_image_batch
+1212678	2.61	ray::WSICropManager.async_get_focus_region_image_batch
+1212676	2.52	ray::WSICropManager.async_get_focus_region_image_batch
+1212657	2.48	ray::WSICropManager.async_get_focus_region_image_batch
+1212672	2.40	ray::WSICropManager.async_get_focus_region_image_batch
+1212668	2.40	ray::WSICropManager.async_get_focus_region_image_batch
+1212687	2.39	ray::WSICropManager.async_get_focus_region_image_batch
+1212681	2.37	ray::WSICropManager.async_get_focus_region_image_batch
+Refer to the documentation on how to address the out of memory issue: https://docs.ray.io/en/latest/ray-core/scheduling/ray-oom-prevention.html. Consider provisioning more memory on this node or reducing task parallelism by requesting more CPUs per task. Set max_restarts and max_task_retries to enable retry when the task crashes due to OOM. To adjust the kill threshold, set the environment variable `RAY_memory_usage_threshold` when starting Ray. To disable worker killing, set the environment variable `RAY_memory_monitor_refresh_ms` to zero."
+Error 17,Relative blue signal is too weak. min_num_regions_within_foci_sd 500 is not reached. Only 27 regions found at num_sds=1. Check slide for potential poor staining/imaging.)
+Error 18,"Task was killed due to the node running low on memory.
+Memory on the node (IP: 172.28.164.114, ID: d2affb4be25c1836aa03cc4e913acf06855e38269cd8fd93e101af06) where the task (actor ID: b6673a0d15fa9db2965494fb01000000, name=WSICropManager.__init__, pid=3090730, memory used=2.56GB) was running was 239.50GB / 251.49GB (0.952313), which exceeds the memory usage threshold of 0.95. Ray killed this worker (ID: 22c4d66bfcd04fbbfb289eecdbf60b02d26c3326dbbc5796f0bf0f63) because it was the most recently scheduled task; to see more information about memory usage on this node, use `ray logs raylet.out -ip 172.28.164.114`. To see the logs of the worker, use `ray logs worker-22c4d66bfcd04fbbfb289eecdbf60b02d26c3326dbbc5796f0bf0f63*out -ip 172.28.164.114. Top 10 memory users:
+PID	MEM(GB)	COMMAND
+1567642	99.86	python scripts/run_all_H_slides.py
+3090702	2.83	ray::WSICropManager
+3090728	2.76	ray::WSICropManager.async_get_focus_region_image_batch
+3090701	2.74	ray::WSICropManager.async_get_focus_region_image_batch
+3090713	2.68	ray::WSICropManager.async_get_focus_region_image_batch
+3090725	2.66	ray::WSICropManager.async_get_focus_region_image_batch
+3090724	2.60	ray::WSICropManager.async_get_focus_region_image_batch
+3090717	2.60	ray::WSICropManager.async_get_focus_region_image_batch
+3090731	2.59	ray::WSICropManager.async_get_focus_region_image_batch
+3090711	2.56	ray::WSICropManager.async_get_focus_region_image_batch
+Refer to the documentation on how to address the out of memory issue: https://docs.ray.io/en/latest/ray-core/scheduling/ray-oom-prevention.html. Consider provisioning more memory on this node or reducing task parallelism by requesting more CPUs per task. Set max_restarts and max_task_retries to enable retry when the task crashes due to OOM. To adjust the kill threshold, set the environment variable `RAY_memory_usage_threshold` when starting Ray. To disable worker killing, set the environment variable `RAY_memory_monitor_refresh_ms` to zero."
+Error 19,Relative blue signal is too weak. min_num_regions_within_foci_sd 500 is not reached. Only 497 regions found at num_sds=1. Check slide for potential poor staining/imaging.)
+Error 20,"Task was killed due to the node running low on memory.
+Memory on the node (IP: 172.28.164.114, ID: 997ae6c8395ac85481687df196d8aa0ce0ba94014843714c2262c632) where the task (actor ID: 2415bbe824d9b8818e21b7f801000000, name=WSICropManager.__init__, pid=57169, memory used=2.20GB) was running was 239.91GB / 251.49GB (0.953956), which exceeds the memory usage threshold of 0.95. Ray killed this worker (ID: f82bf17328b3fe147788eb63aa45b71ffdaffc2a158c2861011cd737) because it was the most recently scheduled task; to see more information about memory usage on this node, use `ray logs raylet.out -ip 172.28.164.114`. To see the logs of the worker, use `ray logs worker-f82bf17328b3fe147788eb63aa45b71ffdaffc2a158c2861011cd737*out -ip 172.28.164.114. Top 10 memory users:
+PID	MEM(GB)	COMMAND
+1567642	63.57	python scripts/run_all_H_slides.py
+57142	2.82	ray::WSICropManager.async_get_focus_region_image_batch
+57143	2.73	ray::WSICropManager.async_get_focus_region_image_batch
+57149	2.66	ray::WSICropManager.async_get_focus_region_image_batch
+57146	2.62	ray::WSICropManager.async_get_focus_region_image_batch
+57162	2.59	ray::WSICropManager.async_get_focus_region_image_batch
+57141	2.53	ray::WSICropManager.async_get_focus_region_image_batch
+57161	2.49	ray::WSICropManager.async_get_focus_region_image_batch
+57144	2.47	ray::WSICropManager.async_get_focus_region_image_batch
+57155	2.36	ray::WSICropManager.async_get_focus_region_image_batch
+Refer to the documentation on how to address the out of memory issue: https://docs.ray.io/en/latest/ray-core/scheduling/ray-oom-prevention.html. Consider provisioning more memory on this node or reducing task parallelism by requesting more CPUs per task. Set max_restarts and max_task_retries to enable retry when the task crashes due to OOM. To adjust the kill threshold, set the environment variable `RAY_memory_usage_threshold` when starting Ray. To disable worker killing, set the environment variable `RAY_memory_monitor_refresh_ms` to zero."
+Error 21,"Task was killed due to the node running low on memory.
+Memory on the node (IP: 172.28.164.114, ID: 8251e69a656203dcfe3d31ef1f1ba441fbd5e780b080e05d11ef8882) where the task (actor ID: d375546d0e94ad89a05b036b01000000, name=WSICropManager.__init__, pid=3796612, memory used=2.54GB) was running was 241.67GB / 251.49GB (0.960934), which exceeds the memory usage threshold of 0.95. Ray killed this worker (ID: f8a9758c4823159e791b096aa9a830e14e222e438934b5716e33165c) because it was the most recently scheduled task; to see more information about memory usage on this node, use `ray logs raylet.out -ip 172.28.164.114`. To see the logs of the worker, use `ray logs worker-f8a9758c4823159e791b096aa9a830e14e222e438934b5716e33165c*out -ip 172.28.164.114. Top 10 memory users:
+PID	MEM(GB)	COMMAND
+1567642	102.05	python scripts/run_all_H_slides.py
+932750	4.20	/home/greg/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/node /h...
+3796601	2.91	ray::WSICropManager
+3796592	2.85	ray::WSICropManager
+3796594	2.81	ray::WSICropManager.async_get_focus_region_image_batch
+3796598	2.72	ray::WSICropManager.async_get_focus_region_image_batch
+3796584	2.72	ray::WSICropManager.async_get_focus_region_image_batch
+3796604	2.68	ray::WSICropManager.async_get_focus_region_image_batch
+3796610	2.67	ray::WSICropManager.async_get_focus_region_image_batch
+3796609	2.65	ray::WSICropManager.async_get_focus_region_image_batch
+Refer to the documentation on how to address the out of memory issue: https://docs.ray.io/en/latest/ray-core/scheduling/ray-oom-prevention.html. Consider provisioning more memory on this node or reducing task parallelism by requesting more CPUs per task. Set max_restarts and max_task_retries to enable retry when the task crashes due to OOM. To adjust the kill threshold, set the environment variable `RAY_memory_usage_threshold` when starting Ray. To disable worker killing, set the environment variable `RAY_memory_monitor_refresh_ms` to zero."
+Error 22,Relative blue signal is too weak. min_num_regions_within_foci_sd 500 is not reached. Only 463 regions found at num_sds=1. Check slide for potential poor staining/imaging.)
+Error 23,"Ray component metrics_export is trying to use a port number 52365 that is used by other components.
+Port information: {'gcs': 'random', 'object_manager': 'random', 'node_manager': 'random', 'gcs_server': 57995, 'client_server': 'random', 'dashboard': 'random', 'dashboard_agent_grpc': 41892, 'dashboard_agent_http': 52365, 'dashboard_grpc': 'random', 'runtime_env_agent': 62216, 'metrics_export': 52365, 'redis_shards': 'random', 'worker_ports': 'random'}
+If you allocate ports, please make sure the same port is not used by multiple components."
+Error 24,"Task was killed due to the node running low on memory.
+Memory on the node (IP: 172.28.164.114, ID: 00edf4253430c87bc4a929f27a3c40aec06694385b7797d16a3f15bf) where the task (actor ID: addf7b39e117d216d9c95da101000000, name=WSICropManager.__init__, pid=2870164, memory used=2.56GB) was running was 239.06GB / 251.49GB (0.950546), which exceeds the memory usage threshold of 0.95. Ray killed this worker (ID: eb601b34db403450e8ccdefe62ddce2e360a74c13dab4eb47b6f6041) because it was the most recently scheduled task; to see more information about memory usage on this node, use `ray logs raylet.out -ip 172.28.164.114`. To see the logs of the worker, use `ray logs worker-eb601b34db403450e8ccdefe62ddce2e360a74c13dab4eb47b6f6041*out -ip 172.28.164.114. Top 10 memory users:
+PID	MEM(GB)	COMMAND
+1567642	90.34	python scripts/run_all_H_slides.py
+2870159	2.95	ray::WSICropManager
+2870150	2.77	ray::WSICropManager.async_get_focus_region_image_batch
+2870155	2.76	ray::WSICropManager.async_get_focus_region_image_batch
+2870162	2.75	ray::WSICropManager.async_get_focus_region_image_batch
+2870163	2.73	ray::WSICropManager.async_get_focus_region_image_batch
+2870166	2.73	ray::WSICropManager.async_get_focus_region_image_batch
+2870168	2.68	ray::WSICropManager.async_get_focus_region_image_batch
+2870167	2.67	ray::WSICropManager.async_get_focus_region_image_batch
+2870140	2.65	ray::WSICropManager.async_get_focus_region_image_batch
+Refer to the documentation on how to address the out of memory issue: https://docs.ray.io/en/latest/ray-core/scheduling/ray-oom-prevention.html. Consider provisioning more memory on this node or reducing task parallelism by requesting more CPUs per task. Set max_restarts and max_task_retries to enable retry when the task crashes due to OOM. To adjust the kill threshold, set the environment variable `RAY_memory_usage_threshold` when starting Ray. To disable worker killing, set the environment variable `RAY_memory_monitor_refresh_ms` to zero."
+Error 25,Relative blue signal is too weak. min_num_regions_within_foci_sd 500 is not reached. Only 432 regions found at num_sds=1. Check slide for potential poor staining/imaging.)
+Error 26,"Task was killed due to the node running low on memory.
+Memory on the node (IP: 172.28.164.114, ID: c96061ed7060bb19ebfa558d4b34a764a34d3024e375667b62b9ebf1) where the task (actor ID: 3727224f098ac43b95820bec01000000, name=WSICropManager.__init__, pid=3834844, memory used=2.40GB) was running was 239.06GB / 251.49GB (0.950576), which exceeds the memory usage threshold of 0.95. Ray killed this worker (ID: 25ed46d11984de92b1696d97e9403783cc503c4e2d002dfd8733318b) because it was the most recently scheduled task; to see more information about memory usage on this node, use `ray logs raylet.out -ip 172.28.164.114`. To see the logs of the worker, use `ray logs worker-25ed46d11984de92b1696d97e9403783cc503c4e2d002dfd8733318b*out -ip 172.28.164.114. Top 10 memory users:
+PID	MEM(GB)	COMMAND
+1567642	98.17	python scripts/run_all_H_slides.py
+2882936	3.08	/home/greg/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/node /h...
+3834846	2.94	ray::WSICropManager.async_get_focus_region_image_batch
+3834833	2.80	ray::WSICropManager.async_get_focus_region_image_batch
+3834823	2.79	ray::WSICropManager.async_get_focus_region_image_batch
+3834824	2.68	ray::WSICropManager.async_get_focus_region_image_batch
+3834828	2.68	ray::WSICropManager.async_get_focus_region_image_batch
+3834820	2.51	ray::WSICropManager.async_get_focus_region_image_batch
+3834847	2.49	ray::WSICropManager.async_get_focus_region_image_batch
+3834837	2.46	ray::WSICropManager.async_get_focus_region_image_batch
+Refer to the documentation on how to address the out of memory issue: https://docs.ray.io/en/latest/ray-core/scheduling/ray-oom-prevention.html. Consider provisioning more memory on this node or reducing task parallelism by requesting more CPUs per task. Set max_restarts and max_task_retries to enable retry when the task crashes due to OOM. To adjust the kill threshold, set the environment variable `RAY_memory_usage_threshold` when starting Ray. To disable worker killing, set the environment variable `RAY_memory_monitor_refresh_ms` to zero."
+Error 27,"SlideError: Can't validate JPEG for directory 0: Expected marker at 4295027632, found none"
+Error 28,"Task was killed due to the node running low on memory.
+Memory on the node (IP: 172.28.164.114, ID: 7dbee5c943736cec8da11ec68ba07c15981cb298824e20d9b79837ba) where the task (actor ID: 9f091c172113724364e5fa2701000000, name=WSICropManager.__init__, pid=192131, memory used=2.32GB) was running was 240.53GB / 251.49GB (0.95642), which exceeds the memory usage threshold of 0.95. Ray killed this worker (ID: 13f9549af56a6e5b420c54f6dc4cee035508cc820d41b30d08fc586b) because it was the most recently scheduled task; to see more information about memory usage on this node, use `ray logs raylet.out -ip 172.28.164.114`. To see the logs of the worker, use `ray logs worker-13f9549af56a6e5b420c54f6dc4cee035508cc820d41b30d08fc586b*out -ip 172.28.164.114. Top 10 memory users:
+PID	MEM(GB)	COMMAND
+1567642	101.79	python scripts/run_all_H_slides.py
+192127	2.81	ray::WSICropManager
+192113	2.72	ray::WSICropManager
+192116	2.61	ray::WSICropManager
+192115	2.54	ray::WSICropManager
+192109	2.51	ray::WSICropManager
+192119	2.48	ray::WSICropManager.async_get_focus_region_image_batch
+192128	2.42	ray::WSICropManager.async_get_focus_region_image_batch
+192112	2.39	ray::WSICropManager.async_get_focus_region_image_batch
+192104	2.39	ray::WSICropManager.async_get_focus_region_image_batch
+Refer to the documentation on how to address the out of memory issue: https://docs.ray.io/en/latest/ray-core/scheduling/ray-oom-prevention.html. Consider provisioning more memory on this node or reducing task parallelism by requesting more CPUs per task. Set max_restarts and max_task_retries to enable retry when the task crashes due to OOM. To adjust the kill threshold, set the environment variable `RAY_memory_usage_threshold` when starting Ray. To disable worker killing, set the environment variable `RAY_memory_monitor_refresh_ms` to zero."
+Error 29,"Task was killed due to the node running low on memory.
+Memory on the node (IP: 172.28.164.114, ID: a19f26332e9b236d06e71e1094457b3fcd46c6f30576df6b24c4c511) where the task (actor ID: 197bcc166e61dfaae4fa015e01000000, name=WSICropManager.__init__, pid=1550431, memory used=2.31GB) was running was 239.80GB / 251.49GB (0.953511), which exceeds the memory usage threshold of 0.95. Ray killed this worker (ID: 8b08299f9a0db8986a54e35dcc2b906fbf84d5afdb566129469aeaab) because it was the most recently scheduled task; to see more information about memory usage on this node, use `ray logs raylet.out -ip 172.28.164.114`. To see the logs of the worker, use `ray logs worker-8b08299f9a0db8986a54e35dcc2b906fbf84d5afdb566129469aeaab*out -ip 172.28.164.114. Top 10 memory users:
+PID	MEM(GB)	COMMAND
+1567642	101.37	python scripts/run_all_H_slides.py
+1550405	2.78	ray::WSICropManager
+1550427	2.58	ray::WSICropManager.async_get_focus_region_image_batch
+1550424	2.45	ray::WSICropManager.async_get_focus_region_image_batch
+1550413	2.44	ray::WSICropManager.async_get_focus_region_image_batch
+1550430	2.43	ray::WSICropManager.async_get_focus_region_image_batch
+1550423	2.37	ray::WSICropManager.async_get_focus_region_image_batch
+1550412	2.37	ray::WSICropManager.async_get_focus_region_image_batch
+1550425	2.37	ray::WSICropManager.async_get_focus_region_image_batch
+1550407	2.35	ray::WSICropManager.async_get_focus_region_image_batch
+Refer to the documentation on how to address the out of memory issue: https://docs.ray.io/en/latest/ray-core/scheduling/ray-oom-prevention.html. Consider provisioning more memory on this node or reducing task parallelism by requesting more CPUs per task. Set max_restarts and max_task_retries to enable retry when the task crashes due to OOM. To adjust the kill threshold, set the environment variable `RAY_memory_usage_threshold` when starting Ray. To disable worker killing, set the environment variable `RAY_memory_monitor_refresh_ms` to zero."
+Error 30,"Task was killed due to the node running low on memory.
+Memory on the node (IP: 172.28.164.114, ID: e849e9769e4dbdad3f329773a08ec399fc0fd0a96194164e19ddf5e0) where the task (actor ID: 21b98e83e581d8f3e6e57b8301000000, name=WSICropManager.__init__, pid=3557956, memory used=2.93GB) was running was 239.37GB / 251.49GB (0.951811), which exceeds the memory usage threshold of 0.95. Ray killed this worker (ID: 0f5e5ed6700a2d821512e5ec71eebf2277f1335399df0aebd238d699) because it was the most recently scheduled task; to see more information about memory usage on this node, use `ray logs raylet.out -ip 172.28.164.114`. To see the logs of the worker, use `ray logs worker-0f5e5ed6700a2d821512e5ec71eebf2277f1335399df0aebd238d699*out -ip 172.28.164.114. Top 10 memory users:
+PID	MEM(GB)	COMMAND
+1567642	101.80	python scripts/run_all_H_slides.py
+932750	4.21	/home/greg/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/node /h...
+3557932	2.94	ray::WSICropManager
+3557939	2.94	ray::WSICropManager
+3557956	2.93	ray::WSICropManager.async_get_focus_region_image_batch
+3557945	2.89	ray::WSICropManager
+3557929	2.88	ray::WSICropManager
+3557955	2.87	ray::WSICropManager.async_get_focus_region_image_batch
+3557936	2.86	ray::WSICropManager
+3557952	2.84	ray::WSICropManager.async_get_focus_region_image_batch
+Refer to the documentation on how to address the out of memory issue: https://docs.ray.io/en/latest/ray-core/scheduling/ray-oom-prevention.html. Consider provisioning more memory on this node or reducing task parallelism by requesting more CPUs per task. Set max_restarts and max_task_retries to enable retry when the task crashes due to OOM. To adjust the kill threshold, set the environment variable `RAY_memory_usage_threshold` when starting Ray. To disable worker killing, set the environment variable `RAY_memory_monitor_refresh_ms` to zero."
+Error 31,"Task was killed due to the node running low on memory.
+Memory on the node (IP: 172.28.164.114, ID: 5b6b7bfc6b4e8ee4b2c7500e168c72cb66221eb641ae6dc44e67c54b) where the task (actor ID: 425279b09b827247c41405b101000000, name=WSICropManager.__init__, pid=2248107, memory used=2.58GB) was running was 239.05GB / 251.49GB (0.950523), which exceeds the memory usage threshold of 0.95. Ray killed this worker (ID: 23bcd4b5c6701a6d1eaec3afbe87a9a2dc235995989c7f1195f8cef2) because it was the most recently scheduled task; to see more information about memory usage on this node, use `ray logs raylet.out -ip 172.28.164.114`. To see the logs of the worker, use `ray logs worker-23bcd4b5c6701a6d1eaec3afbe87a9a2dc235995989c7f1195f8cef2*out -ip 172.28.164.114. Top 10 memory users:
+PID	MEM(GB)	COMMAND
+1567642	86.38	python scripts/run_all_H_slides.py
+2248104	2.89	ray::WSICropManager.async_get_focus_region_image_batch
+2248094	2.71	ray::WSICropManager.async_get_focus_region_image_batch
+2248084	2.70	ray::WSICropManager.async_get_focus_region_image_batch
+2248078	2.68	ray::WSICropManager.async_get_focus_region_image_batch
+2248093	2.68	ray::WSICropManager.async_get_focus_region_image_batch
+2248080	2.63	ray::WSICropManager.async_get_focus_region_image_batch
+2248106	2.60	ray::WSICropManager.async_get_focus_region_image_batch
+2248097	2.60	ray::WSICropManager.async_get_focus_region_image_batch
+2248107	2.58	ray::WSICropManager.async_get_focus_region_image_batch
+Refer to the documentation on how to address the out of memory issue: https://docs.ray.io/en/latest/ray-core/scheduling/ray-oom-prevention.html. Consider provisioning more memory on this node or reducing task parallelism by requesting more CPUs per task. Set max_restarts and max_task_retries to enable retry when the task crashes due to OOM. To adjust the kill threshold, set the environment variable `RAY_memory_usage_threshold` when starting Ray. To disable worker killing, set the environment variable `RAY_memory_monitor_refresh_ms` to zero."
