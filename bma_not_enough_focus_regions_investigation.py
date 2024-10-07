@@ -44,8 +44,8 @@ for result_dir_path in tqdm(all_result_dir_paths, desc="Filtering out error dirs
 
         # check if the error message contains the string "Too few focus regions found."
         if "Too few focus regions found." in error_message:
-            topview_grid_rep_path = os.path.join(result_dir_path, "topview_grid_rep.png")
-            topview_heat_map_path = os.path.join(result_dir_path, "topview_heat_map.png")
+            topview_grid_rep_path = os.path.join(result_dir_path, "top_view_grid_rep.png")
+            topview_heat_map_path = os.path.join(result_dir_path, "confidence_heatmap.png")
 
             # copy the topview_grid_rep.png and topview_heat_map.png to the save_dir using shutil.copy
             shutil.copy(topview_grid_rep_path, os.path.join(save_dir, "BMA_grid_rep", os.path.basename(result_dir_path) + ".png"))
