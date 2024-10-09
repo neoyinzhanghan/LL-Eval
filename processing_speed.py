@@ -38,7 +38,7 @@ print(f"Number of non-error dirs: {len(non_error_dirs)}")
 bma_runtimes = []
 pbs_runtimes = []
 
-for non_error_dir in tqdm(non_error_dirs, desc="Extracting error messages:"):
+for non_error_dir in tqdm(non_error_dirs, desc="Extracting runtimes:"):
     runtime_csv_path = os.path.join(non_error_dir, "runtime_data.csv")
     runtime_df = pd.read_csv(runtime_csv_path, header=None, index_col=0)
 
