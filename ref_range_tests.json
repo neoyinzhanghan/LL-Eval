@@ -5,6 +5,11 @@
             "ER1",
             "M2"
         ],
+        "diff_classes": [
+            "blasts",
+            "blast-equivalents",
+            "promyelocytes"
+        ],
         "cell_group": "Blast-like",
         "Specimen Type": "BMA",
         "Associated Diagnosis": "Normal",
@@ -15,6 +20,11 @@
             "M1",
             "ER1",
             "M2"
+        ],
+        "diff_classes": [
+            "blasts",
+            "blast-equivalents",
+            "promyelocytes"
         ],
         "cell_group": "Blast-like",
         "Associated Diagnosis": "MDS EB/MPN",
@@ -27,6 +37,11 @@
             "ER1",
             "M2"
         ],
+        "diff_classes": [
+            "blasts",
+            "blast-equivalents",
+            "promyelocytes"
+        ],
         "cell_group": "Blast-like",
         "Specimen Type": "BMA",
         "Associated Diagnosis": "AML/ALL",
@@ -37,6 +52,11 @@
             "M1",
             "ER1",
             "M2"
+        ],
+        "diff_classes": [
+            "blasts",
+            "blast-equivalents",
+            "promyelocytes"
         ],
         "cell_group": "Blast-like",
         "Specimen Type": "PB",
@@ -49,6 +69,11 @@
             "ER1",
             "M2"
         ],
+        "diff_classes": [
+            "blasts",
+            "blast-equivalents",
+            "promyelocytes"
+        ],
         "cell_group": "Blast-like",
         "Specimen Type": "PB",
         "Associated Diagnosis": "Elevated",
@@ -60,6 +85,11 @@
             "ER1",
             "M2"
         ],
+        "diff_classes": [
+            "blasts",
+            "blast-equivalents",
+            "promyelocytes"
+        ],
         "cell_group": "Blast-like",
         "Specimen Type": "PB",
         "Associated Diagnosis": "AML/ALL",
@@ -68,6 +98,9 @@
     "PB Normal Plasma Cell": {
         "cell_classes": [
             "L4"
+        ],
+        "diff_classes": [
+            "plasma cells"
         ],
         "cell_group": "Plasma Cell",
         "Specimen Type": "PB",
@@ -78,6 +111,9 @@
         "cell_classes": [
             "L4"
         ],
+        "diff_classes": [
+            "plasma cells"
+        ],
         "cell_group": "Plasma Cell",
         "Specimen Type": "PB",
         "Associated Diagnosis": "Elevated",
@@ -86,6 +122,9 @@
     "BMA Normal Plasma Cell": {
         "cell_classes": [
             "L4"
+        ],
+        "diff_classes": [
+            "plasma cells"
         ],
         "cell_group": "Plasma Cell",
         "Specimen Type": "BMA",
@@ -96,6 +135,9 @@
         "cell_classes": [
             "L4"
         ],
+        "diff_classes": [
+            "plasma cells"
+        ],
         "cell_group": "Plasma Cell",
         "Specimen Type": "BMA",
         "Associated Diagnosis": "Suggests MGUS",
@@ -104,6 +146,9 @@
     "BMA Normal Lymphocytes": {
         "cell_classes": [
             "L2"
+        ],
+        "diff_classes": [
+            "lymphocytes"
         ],
         "cell_group": "Lymphocytes",
         "Specimen Type": "BMA",
@@ -114,6 +159,9 @@
         "cell_classes": [
             "L2"
         ],
+        "diff_classes": [
+            "lymphocytes"
+        ],
         "cell_group": "Lymphocytes",
         "Specimen Type": "BMA",
         "Associated Diagnosis": "High",
@@ -122,6 +170,9 @@
     "PB Lower Bracket Lymphocytes": {
         "cell_classes": [
             "L2"
+        ],
+        "diff_classes": [
+            "lymphocytes"
         ],
         "cell_group": "Lymphocytes",
         "Specimen Type": "PB",
@@ -132,6 +183,9 @@
         "cell_classes": [
             "L2"
         ],
+        "diff_classes": [
+            "lymphocytes"
+        ],
         "cell_group": "Lymphocytes",
         "Specimen Type": "PB",
         "Associated Diagnosis": "Higher Bracket (%s are not defining of normal)",
@@ -140,6 +194,9 @@
     "PB Normal Monocytes": {
         "cell_classes": [
             "MO2"
+        ],
+        "diff_classes": [
+            "monocytes"
         ],
         "cell_group": "Monocyte",
         "Specimen Type": "PB",
@@ -150,6 +207,9 @@
         "cell_classes": [
             "MO2"
         ],
+        "diff_classes": [
+            "monocytes"
+        ],
         "cell_group": "Monocyte",
         "Specimen Type": "PB",
         "Associated Diagnosis": "High (CMML, Infection)",
@@ -158,6 +218,9 @@
     "BMA Normal Monocytes": {
         "cell_classes": [
             "MO2"
+        ],
+        "diff_classes": [
+            "monocytes"
         ],
         "cell_group": "Monocyte",
         "Specimen Type": "BMA",
@@ -168,6 +231,9 @@
         "cell_classes": [
             "MO2"
         ],
+        "diff_classes": [
+            "monocytes"
+        ],
         "cell_group": "Monocyte",
         "Specimen Type": "BMA",
         "Associated Diagnosis": "High (CMML, Infection)",
@@ -175,7 +241,11 @@
     },
     "PB Normal Eosinophils": {
         "cell_classes": [
-            "E*"
+            "E1",
+            "E4"
+        ],
+        "diff_classes": [
+            "eosinophils"
         ],
         "cell_group": "Eosinophils",
         "Specimen Type": "PB",
@@ -193,7 +263,11 @@
     },
     "BMA Normal Eosinophils": {
         "cell_classes": [
-            "E*"
+            "E1",
+            "E4"
+        ],
+        "diff_classes": [
+            "eosinophils"
         ],
         "cell_group": "Eosinophils",
         "Specimen Type": "BMA",
@@ -202,61 +276,15 @@
     },
     "BMA Elevated Eosinophils": {
         "cell_classes": [
-            "E*"
+            "E1",
+            "E4"
+        ],
+        "diff_classes": [
+            "eosinophils"
         ],
         "cell_group": "Eosinophils",
         "Specimen Type": "BMA",
         "Associated Diagnosis": "Elevated",
         "range": "(6,100]"
-    },
-    "PB Normal Immature Granulocytes": {
-        "cell_classes": [
-            "M3",
-            "M4"
-        ],
-        "cell_group": "Immature Granulocytes",
-        "Specimen Type": "PB",
-        "Associated Diagnosis": "Normal",
-        "range": "[0,1]"
-    },
-    "PB Elevated Immature Granulocytes": {
-        "cell_classes": [
-            "M3",
-            "M4"
-        ],
-        "cell_group": "Immature Granulocytes",
-        "Specimen Type": "PB",
-        "Associated Diagnosis": "Elevated",
-        "range": "(1,100]"
-    },
-    "BMA Normal ME Ratio": {
-        "cell_classes": [
-            "M1",
-            "M2"
-        ],
-        "cell_group": "ME Ratio",
-        "Specimen Type": "BMA",
-        "Associated Diagnosis": "Normal",
-        "range": "[2,4]"
-    },
-    "BMA High ME Ratio": {
-        "cell_classes": [
-            "M1",
-            "M2"
-        ],
-        "cell_group": "ME Ratio",
-        "Specimen Type": "BMA",
-        "Associated Diagnosis": "High",
-        "range": "(4,100]"
-    },
-    "BMA Low ME Ratio": {
-        "cell_classes": [
-            "M1",
-            "M2"
-        ],
-        "cell_group": "ME Ratio",
-        "Specimen Type": "BMA",
-        "Associated Diagnosis": "Low",
-        "range": "[0,2)"
     }
 }
