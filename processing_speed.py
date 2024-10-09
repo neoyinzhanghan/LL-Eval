@@ -37,6 +37,8 @@ print(f"Number of non-error dirs: {len(non_error_dirs)}")
 
 bma_runtimes = []
 pbs_runtimes = []
+bma_cell_clf_runtimes = []
+pbs_cell_clf_runtimes = []
 
 for non_error_dir in tqdm(non_error_dirs, desc="Extracting runtimes:"):
     runtime_csv_path = os.path.join(non_error_dir, "runtime_data.csv")
@@ -44,11 +46,25 @@ for non_error_dir in tqdm(non_error_dirs, desc="Extracting runtimes:"):
 
     runtime = int(runtime_df.loc["total_non_hoarding_time", 1])
 
+    cell_clf_time = int(runtime_df.loc["label_wbc_candidates_time", 1])
+
     if "BMA-diff" in non_error_dir:
         bma_runtimes.append(runtime)
+        bma_cell_clf_runtimes.append(cell_clf_time)
     else:
         pbs_runtimes.append(runtime)
+        pbs_cell_clf_runtimes.append(cell_clf_time)
 
 
-print(f"Average runtime for BMA: {sum(bma_runtimes)/len(bma_runtimes)}")
-print(f"Average runtime for PBS: {sum(pbs_runtimes)/len(pbs_runtimes)}")
+print(
+    f"Average total non-hoarding runtime for BMA: {sum(bma_runtimes)/len(bma_runtimes)}"
+)
+print(
+    f"Average total non-boarding runtime for PBS: {sum(pbs_runtimes)/len(pbs_runtimes)}"
+)
+print(
+    f"Average cell classification runtime for BMA: {sum(bma_cell_clf_runtimes)/len(bma_cell_clf_runtimes)}"
+)
+print(
+    f"Average cell classification runtime for PBS: {sum(pbs_cell_clf_runtimes)/len(pbs_cell_clf_runtimes)}"
+)
