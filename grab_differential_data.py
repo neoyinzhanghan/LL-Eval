@@ -48,7 +48,7 @@ for result_dir_path in tqdm(non_error_dirs, desc="Extracting accession numbers:"
 print("Getting copath data from database...")
 copath_df = get_path_data(accession_numbers)
 print("Extracting differential data from copath data...")
-diff_df = get_diff(accession_numbers)
+diff_df = get_diff(copath_df)
 
 # save the copath_df and diff_df to csv files
 copath_df.to_csv("/media/hdd3/neo/copath_data_2024-10-09.csv", index=False)
