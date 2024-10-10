@@ -39,26 +39,17 @@ def get_slide_bar_code(pipeline_result_dir):
 non_error_dirs_df = pd.read_csv(non_error_dir_csv_path)
 non_error_dirs = non_error_dirs_df["result_dir_path"].tolist()
 
-diff_rows = []
+accession_numbers = []
+for result_dir_path in tqdm(non_error_dirs, desc="Extracting accession numbers:"):
+    wsi_name = get_slide_bar_code(result_dir_path)
+    accession_number = wsi_name.split("_")[0]
+    accession_numbers.append(accession_number)
 
-i = 0
-for result_dir_path in tqdm(non_error_dirs, desc="Filtering out error dirs:"):
-    while i < 10:
+print("Getting copath data from database...")
+copath_df = get_path_data(accession_numbers)
+print("Extracting differential data from copath data...")
+diff_df = get_diff(accession_numbers)
 
-        wsi_name = get_slide_bar_code(result_dir_path)
-        pipeline = get_pipeline(result_dir_path)
-
-        accession_number = wsi_name.split(";")[0]
-
-        if pipeline == "BMA-diff":
-            new_path_df_row = get_path_data(accession_number)
-            new_df_row = get_diff(new_path_df_row)
-
-            i += 1
-
-        diff_rows.append(new_df_row)
-
-
-diff_df = pd.DataFrame(diff_rows)
-
-diff_df.to_csv("/media/hdd3/neo/test_diff_df.csv", index=False)
+# save the copath_df and diff_df to csv files
+copath_df.to_csv("/media/hdd3/neo/copath_data_2024-10-09.csv", index=False)
+diff_df.to_csv("/media/hdd3/neo/differential_data_2024-10-09.csv", index=False)
