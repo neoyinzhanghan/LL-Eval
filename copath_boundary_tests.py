@@ -2,6 +2,8 @@ import json
 import pandas as pd
 import numpy as np
 import os
+import matplotlib.pyplot as plt
+import seaborn as sns
 from tqdm import tqdm
 from sklearn.metrics import confusion_matrix
 
@@ -23,7 +25,7 @@ ground_truth_diff_data = ground_truth_diff_data.drop(
     columns=["part_description", "text_data_final"]
 )
 
-# Output directory for saving confusion matrices
+# Output directory for saving confusion matrix images
 output_dir = "/Users/neo/Documents/MODS/LL-Eval/bdry_tests_results/2024-10-10"
 os.makedirs(output_dir, exist_ok=True)
 
@@ -100,19 +102,26 @@ for test_name, test_details in ref_range_tests.items():
     conf_matrix = confusion_matrix(y_true, y_pred, labels=[True, False])
     confusion_matrices[test_name] = conf_matrix
 
-    # Convert the confusion matrix to a DataFrame for saving
-    conf_matrix_df = pd.DataFrame(
+    # Create a heatmap plot of the confusion matrix
+    plt.figure(figsize=(6, 4))
+    sns.heatmap(
         conf_matrix,
-        index=["True (In Range)", "True (Out of Range)"],
-        columns=["Predicted (In Range)", "Predicted (Out of Range)"],
+        annot=True,
+        fmt="d",
+        cmap="Blues",
+        xticklabels=["Predicted (In Range)", "Predicted (Out of Range)"],
+        yticklabels=["True (In Range)", "True (Out of Range)"],
+        cbar=False
     )
-    # Save each confusion matrix as a CSV file named after the test_name
-    conf_matrix_df.to_csv(
-        os.path.join(output_dir, f"{test_name.replace(' ', '_')}_confusion_matrix.csv")
-    )
+    plt.title(f"Confusion Matrix: {test_name}")
+    plt.xlabel("Predicted Label")
+    plt.ylabel("True Label")
+    
+    # Save the confusion matrix plot as an image
+    plot_filename = os.path.join(output_dir, f"{test_name.replace(' ', '_')}_confusion_matrix.png")
+    plt.savefig(plot_filename, dpi=300, bbox_inches="tight")
+    plt.close()
 
-    print(f"\nConfusion Matrix for {test_name}:")
-    print(f"Labels: [True, False]")
-    print(conf_matrix)
+    print(f"\nConfusion Matrix for {test_name} saved as: {plot_filename}")
 
-print(f"Confusion matrices saved to: {output_dir}")
+print(f"All confusion matrix images saved to: {output_dir}")
