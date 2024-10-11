@@ -162,4 +162,4 @@ print(f"Number of non-error dirs: {len(non_error_dirs)}")
 
 differential_df = pd.DataFrame(differential_df_dct)
 
-differential_df.to_csv("/media/hdd3/neo/test_differential_df.csv", index=False)
+differential_df.to_csv("/media/hdd3/neo/test_diff_results.csv", index=False)
