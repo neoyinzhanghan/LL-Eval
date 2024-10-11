@@ -142,14 +142,15 @@ for result_dir_path in tqdm(all_result_dir_paths, desc="Filtering out error dirs
     if not os.path.exists(os.path.join(result_dir_path, "error.txt")):
         non_error_dirs.append(result_dir_path)
 
-        wsi_name = get_slide_bar_code(result_dir_path)
+        if "BMA-diff" in result_dir_path:
+            wsi_name = get_slide_bar_code(result_dir_path)
 
-        differential_dict = get_differential_dict_from_result_dir(result_dir_path)
+            differential_dict = get_differential_dict_from_result_dir(result_dir_path)
 
-        differential_df_dct["wsi_name"].append(wsi_name)
-        differential_df_dct["result_dir_path"].append(result_dir_path)
-        for cellname in cellnames_to_keep:
-            differential_df_dct[cellname].append(differential_dict[cellname])
+            differential_df_dct["wsi_name"].append(wsi_name)
+            differential_df_dct["result_dir_path"].append(result_dir_path)
+            for cellname in cellnames_to_keep:
+                differential_df_dct[cellname].append(differential_dict[cellname])
 
     else:
         num_errors += 1
