@@ -42,7 +42,7 @@ non_error_dirs = non_error_dirs_df["result_dir_path"].tolist()
 accession_numbers = []
 for result_dir_path in tqdm(non_error_dirs, desc="Extracting accession numbers:"):
     wsi_name = get_slide_bar_code(result_dir_path)
-    accession_number = wsi_name.split("_")[0]
+    accession_number = wsi_name.split(";")[0]
     accession_numbers.append(accession_number)
 
 print("Getting copath data from database...")
@@ -50,6 +50,11 @@ copath_df = get_path_data(accession_numbers)
 print("Extracting differential data from copath data...")
 diff_df = get_diff(copath_df)
 
+# print the number of rows in the copath_df and diff_df
+print(f"Number of accession numbers requested: {len(accession_numbers)}")
+print(f"Number of rows in copath_df: {len(copath_df)}")
+print(f"Number of rows in diff_df: {len(diff_df)}")
+
 # save the copath_df and diff_df to csv files
-copath_df.to_csv("/media/hdd3/neo/copath_data_2024-10-09.csv", index=False)
-diff_df.to_csv("/media/hdd3/neo/differential_data_2024-10-09.csv", index=False)
+copath_df.to_csv("/media/hdd3/neo/copath_data_2024-10-10.csv", index=False)
+diff_df.to_csv("/media/hdd3/neo/differential_data_2024-10-10.csv", index=False)
