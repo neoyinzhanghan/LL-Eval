@@ -13,9 +13,9 @@ with open(ref_range_tests_json_path, "r") as f:
     ref_range_tests = json.load(f)
 
 # Load CSV files
-diff_result_path = "/Users/neo/Documents/MODS/LL-Eval/2024-10-10/test_diff_results.csv"
+diff_result_path = "/Users/neo/Documents/MODS/LL-Eval/data/2024-10-10/test_diff_results.csv"
 ground_truth_diff_data_path = (
-    "/Users/neo/Documents/MODS/LL-Eval/2024-10-10/differential_data_2024-10-10.csv"
+    "/Users/neo/Documents/MODS/LL-Eval/data/2024-10-10/differential_data_2024-10-10.csv"
 )
 diff_result = pd.read_csv(diff_result_path)
 ground_truth_diff_data = pd.read_csv(ground_truth_diff_data_path)
@@ -113,6 +113,7 @@ for test_name, test_details in ref_range_tests.items():
         yticklabels=["True (In Range)", "True (Out of Range)"],
         cbar=False
     )
+
     plt.title(f"Confusion Matrix: {test_name}")
     plt.xlabel("Predicted Label")
     plt.ylabel("True Label")

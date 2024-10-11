@@ -15,7 +15,7 @@
         "Associated Diagnosis": "Normal",
         "range": "[0,5)"
     },
-    "BMA MDS EB/MPN Blast-like": {
+    "BMA MDS EB or MPN Blast-like": {
         "cell_classes": [
             "M1",
             "ER1",
@@ -27,11 +27,11 @@
             "promyelocytes"
         ],
         "cell_group": "Blast-like",
-        "Associated Diagnosis": "MDS EB/MPN",
+        "Associated Diagnosis": "MDS EB or MPN",
         "Specimen Type": "BMA",
         "range": "[5,20)"
     },
-    "BMA AML/ALL Blast-like": {
+    "BMA AML or ALL Blast-like": {
         "cell_classes": [
             "M1",
             "ER1",
@@ -44,7 +44,7 @@
         ],
         "cell_group": "Blast-like",
         "Specimen Type": "BMA",
-        "Associated Diagnosis": "AML/ALL",
+        "Associated Diagnosis": "AML or ALL",
         "range": "[20,100]"
     },
     "PB Normal Blast-like": {
@@ -79,7 +79,7 @@
         "Associated Diagnosis": "Elevated",
         "range": "[1,20)"
     },
-    "PB AML/ALL Blast-like": {
+    "PB AML or ALL Blast-like": {
         "cell_classes": [
             "M1",
             "ER1",
@@ -92,7 +92,7 @@
         ],
         "cell_group": "Blast-like",
         "Specimen Type": "PB",
-        "Associated Diagnosis": "AML/ALL",
+        "Associated Diagnosis": "AML or ALL",
         "range": "[20,100]"
     },
     "PB Normal Plasma Cell": {

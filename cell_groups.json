@@ -1,0 +1,47 @@
+{
+    "Blast-like": {
+        "cell_classes": [
+            "M1",
+            "ER1",
+            "M2"
+        ],
+        "diff_classes": [
+            "blasts",
+            "blast-equivalents",
+            "promyelocytes"
+        ]
+    },
+    "Plasma Cell": {
+        "cell_classes": [
+            "L4"
+        ],
+        "diff_classes": [
+            "plasma cells"
+        ]
+    },
+    "Lymphocytes": {
+        "cell_classes": [
+            "L2"
+        ],
+        "diff_classes": [
+            "lymphocytes"
+        ]
+    },
+    "Monocyte": {
+        "cell_classes": [
+            "MO2"
+        ],
+        "diff_classes": [
+            "monocytes"
+        ]
+    },
+    "Eosinophils": {
+        "cell_classes": [
+            "E1",
+            "E4"
+        ],
+        "diff_classes": [
+            "eosinophils"
+        ]
+    }
+}
