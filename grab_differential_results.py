@@ -137,7 +137,9 @@ num_dirs = len(all_result_dir_paths)
 non_error_dirs = []
 
 all_cell_paths = []
-for result_dir_path in tqdm(all_result_dir_paths, desc="Filtering out error dirs:"):
+for result_dir_path in tqdm(
+    all_result_dir_paths, desc="Filtering out error dirs and processing differential:"
+):
     # check if the result_dir_path contains a file called "error.txt"
     if not os.path.exists(os.path.join(result_dir_path, "error.txt")):
         non_error_dirs.append(result_dir_path)
