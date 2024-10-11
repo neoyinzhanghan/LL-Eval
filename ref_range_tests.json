@@ -254,7 +254,11 @@
     },
     "PB Elevated Eosinophils": {
         "cell_classes": [
-            "E*"
+            "E1",
+            "E4"
+        ],
+        "diff_classes": [
+            "eosinophils"
         ],
         "cell_group": "Eosinophils",
         "Specimen Type": "PB",
