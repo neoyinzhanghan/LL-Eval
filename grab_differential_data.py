@@ -41,9 +41,10 @@ non_error_dirs = non_error_dirs_df["result_dir_path"].tolist()
 
 accession_numbers = []
 for result_dir_path in tqdm(non_error_dirs, desc="Extracting accession numbers:"):
-    wsi_name = get_slide_bar_code(result_dir_path)
-    accession_number = wsi_name.split(";")[0]
-    accession_numbers.append(accession_number)
+    if "BMA-diff" in result_dir_path:
+        wsi_name = get_slide_bar_code(result_dir_path)
+        accession_number = wsi_name.split(";")[0]
+        accession_numbers.append(accession_number)
 
 print("Getting copath data from database...")
 copath_df = get_path_data(accession_numbers)
