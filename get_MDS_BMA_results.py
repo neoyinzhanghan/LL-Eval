@@ -61,7 +61,7 @@ group_names = [
 
 result_dirs = [
     "/media/hdd3/neo/MDS_EB1_EB2_results",
-    "/media/hdd3/neo/MDS_non_EB1_EB3_results",
+    "/media/hdd3/neo/MDS_non_EB1_EB2_results",
 ]
 
 # first get the paths of all the subdirs of all the result_dirs
