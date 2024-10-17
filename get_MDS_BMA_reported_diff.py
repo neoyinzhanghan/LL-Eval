@@ -1,7 +1,7 @@
 import pandas as pd
 from get_copath_data import get_diff, get_path_data
 
-wsi_names_csv_path = "/media/hdd3/neo/wsi_names.csv"
+wsi_names_csv_path = "/media/hdd3/neo/MDS_all_wsi_names.csv"
 
 # get the wsi_name column of the wsi_names.csv file as a list
 wsi_names_df = pd.read_csv(wsi_names_csv_path)
