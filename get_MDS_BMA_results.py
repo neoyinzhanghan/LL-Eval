@@ -69,7 +69,8 @@ subdirs = []
 
 for result_dir in result_dirs:
     for subdir in os.listdir(result_dir):
-        subdirs.append(os.path.join(result_dir, subdir))
+        if not subdir.endswith(".csv"):
+            subdirs.append(os.path.join(result_dir, subdir))
 
 diff_dict = {
     "wsi_name": [],
