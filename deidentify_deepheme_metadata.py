@@ -20,8 +20,10 @@ for idx, row in tqdm(cell_metadata.iterrows(), desc="Deidentifying cell metadata
     # if UCSF_repo is in the path, the institution is UCSF
     if "UCSF_repo" in original_path:
         institution = "UCSF"
+    elif "MSK_repo_normal" in original_path:
+        institution = "MSK_normal"
     elif "MSK_repo_mixed" in original_path:
-        institution = "MSK"
+        institution = "MSK_mixed"
     else:  # skip the row if the institution is not UCSF or MSK
         continue
 
@@ -39,4 +41,4 @@ for idx, row in tqdm(cell_metadata.iterrows(), desc="Deidentifying cell metadata
 deiden_df = pd.DataFrame(deidentified_cell_df_dict)
 
 # save the deidentified cell metadata to a csv file
-deiden_df.to_csv("deidentified_cell_metadata.csv", index=False)
+deiden_df.to_csv("deidentified_cell_metadata_normal.csv", index=False)
