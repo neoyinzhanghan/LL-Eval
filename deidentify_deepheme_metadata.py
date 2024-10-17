@@ -41,4 +41,4 @@ for idx, row in tqdm(cell_metadata.iterrows(), desc="Deidentifying cell metadata
 deiden_df = pd.DataFrame(deidentified_cell_df_dict)
 
 # save the deidentified cell metadata to a csv file
-deiden_df.to_csv("deidentified_cell_metadata_normal.csv", index=False)
+deiden_df.to_csv("deidentified_cell_metadata.csv", index=False)
