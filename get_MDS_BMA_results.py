@@ -69,7 +69,7 @@ subdirs = []
 
 for result_dir in result_dirs:
     for subdir in os.listdir(result_dir):
-        if not subdir.endswith(".csv"):
+        if not subdir.endswith(".csv") and not subdir.startswith("ERROR"):
             subdirs.append(os.path.join(result_dir, subdir))
 
 diff_dict = {
