@@ -5,14 +5,14 @@ import pandas as pd
 from PIL import Image
 from tqdm import tqdm
 
-data_dir = "/media/hdd3/neo/results_dir"
+data_dir = "/media/greg/534773e3-83ea-468f-a40d-46c913378014/neo/results_dir"
 
 # get the list of all subdirectories in the data directory
 all_subdirs = [
     d for d in os.listdir(data_dir) if os.path.isdir(os.path.join(data_dir, d))
 ]
 
-# onlu keep the one that starts with BMA and PBS
+# only keep the one that starts with BMA and PBS
 result_dirs = [d for d in all_subdirs if "BMA-diff" in d or "PBS-diff" in d]
 
 all_result_dir_paths = [os.path.join(data_dir, d) for d in result_dirs]
