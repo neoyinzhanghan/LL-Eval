@@ -8,6 +8,8 @@ result_dir = "/media/glv3/hdd1/neo/results_dir"
 non_error_pipeline_aggregate_df_path = "pipeline_nonerror_aggregate_df.csv"
 save_dir = "/media/hdd3/neo/results_dir_to_copy"
 
+os.makedirs(save_dir, exist_ok=True)    
+
 # read the pipeline_nonerror_aggregate_df.csv file as a dataframe
 non_error_pipeline_aggregate_df = pd.read_csv(non_error_pipeline_aggregate_df_path)
 
