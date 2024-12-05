@@ -19,9 +19,9 @@ pipeline_run_history_df = pd.read_csv(
 
 # create a new column in pipeline_run_history_df called "result_dir_name" that is pipeline underscore datetime_processed
 pipeline_run_history_df["result_dir_name"] = (
-    str(pipeline_run_history_df["pipeline"])
+    pipeline_run_history_df["pipeline"]
     + "_"
-    + str(pipeline_run_history_df["datetime_processed"])
+    + pipeline_run_history_df["datetime_processed"]
 )
 
 # read the pipeline_nonerror_aggregate_df.csv file as a dataframe
