@@ -90,3 +90,8 @@ for batch_idx, batch in tqdm(enumerate(result_dir_names_batches)):
         os.path.join(batch_save_dir, f"pipeline_run_history_{batch_idx}.csv"),
         index=False,
     )
+
+# save the whole pipeline_run_history_df to a csv file named pipeline_run_history.csv
+pipeline_run_history_df.to_csv(
+    os.path.join(save_dir, "pipeline_run_history.csv"), index=False
+)
