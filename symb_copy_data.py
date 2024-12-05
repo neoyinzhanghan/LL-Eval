@@ -78,7 +78,7 @@ for batch_idx, batch in tqdm(enumerate(result_dir_names_batches)):
     for result_dir_name in tqdm(batch, desc="Getting symbolic link"):
         result_dir_path = os.path.join(result_dir, result_dir_name)
         save_path = os.path.join(batch_save_dir, result_dir_name)
-        os.symlink(result_dir_path, save_path)
+        shutil.copytree(result_dir_path, save_path)
 
     # crop the pipeline_run_history_df to only include the result_dir_names in the batch
     cropped_pipeline_run_history_df = pipeline_run_history_df[
